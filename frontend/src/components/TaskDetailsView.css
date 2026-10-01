@@ -1,0 +1,264 @@
+.task-details-view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.details-container {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.details-header {
+  background-color: #f3f4f6;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.details-title-section {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.status-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.details-title {
+  font-size: 22px;
+  margin: 0;
+  line-height: 1.3;
+  word-break: break-word;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.btn-close {
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-close:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.details-content {
+  padding: 24px;
+}
+
+.details-section {
+  margin-bottom: 24px;
+}
+
+.details-section:last-child {
+  margin-bottom: 0;
+}
+
+.details-section h3 {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.description-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-left: 3px solid #3b82f6;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.status-display,
+.priority-display {
+  display: inline-block;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.todo {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.in-progress {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.priority-display {
+  padding: 10px 12px;
+  background-color: #f9fafb;
+  border-left: 3px solid;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+}
+
+.date-text,
+.id-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  padding: 0;
+  font-family: 'Menlo', 'Courier', monospace;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.details-grid .details-section {
+  margin-bottom: 0;
+}
+
+.details-actions {
+  padding: 16px 24px;
+  background-color: #f9fafb;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #374151;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .details-header {
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  .details-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details-title {
+    font-size: 18px;
+  }
+
+  .status-icon {
+    font-size: 24px;
+  }
+
+  .details-content {
+    padding: 16px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-actions {
+    padding: 12px 16px;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    flex: none;
+  }
+
+  .details-section {
+    margin-bottom: 16px;
+  }
+}
