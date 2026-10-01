@@ -242,4 +242,4 @@ For issues or questions, please create an issue in the repository or contact the
 
 ---
 
-Built with ❤️ using React and Express.js
+Built with using React and Express.js
